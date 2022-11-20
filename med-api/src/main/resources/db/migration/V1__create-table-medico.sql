@@ -1,7 +1,3 @@
--- Drop table
-
--- DROP TABLE public.medico
-
 CREATE TABLE public.medico (
 	id bigserial NOT NULL,
 	crm varchar(255) NULL,
@@ -16,7 +12,4 @@ CREATE TABLE public.medico (
 	especialidade varchar(255) NULL,
 	nome varchar(255) NULL,
 	CONSTRAINT medico_pkey PRIMARY KEY (id)
-)
-WITH (
-	OIDS=FALSE
-) ;
+);
