@@ -35,7 +35,7 @@ public class PacienteController {
     
     @GetMapping
     public Page<DadosListagemPacienteDTO> listar(@PageableDefault(page = 0, size = 10, sort = {"nome"}) Pageable paginacao) {
-        return repository.findAll(paginacao).map(DadosListagemPacienteDTO::new);
+        return repository.findAllByAtivoTrue(paginacao).map(DadosListagemPacienteDTO::new);
     }
     
     @PutMapping
